@@ -6,19 +6,28 @@
     <div v-if="feed">
       <div
         class="article-preview"
-        v-for="(article, index) in feed.articles"
-        :key="index"
+        v-for="article in feed.articles"
+        :key="article.id"
       >
         <div class="article-meta">
           <router-link
-            :to="{name: user.profile, params: {slug: article.author.username}}"
+            :to="{name: 'userProfile', params: {slug: article.author.username}}"
           >
-            <img :src="article.author.image" :alt="article.author.username" />
+            <img
+              v-if="article.author.image"
+              :src="article.author.image"
+              :alt="article.author.username"
+            />
+            <img
+              v-else
+              src="../assets/default-avatar.png"
+              :alt="article.author.username"
+            />
           </router-link>
           <div class="info">
             <router-link
               :to="{
-                name: user.profile,
+                name: 'userProfile',
                 params: {slug: article.author.username},
               }"
               class="author"
@@ -30,7 +39,7 @@
           <div class="pul-xs-right">Add To Favorites</div>
         </div>
         <router-link
-          :to="{name: article, params: {slug: article.slug}}"
+          :to="{name: 'article', params: {slug: article.slug}}"
           class="preview-link"
         >
           <h1>{{ article.title }}</h1>
