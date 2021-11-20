@@ -17,7 +17,6 @@ export default {
   },
   computed: {
     errorMessages() {
-      console.log(this.validationErrors)
       return Object.keys(this.validationErrors).map((name) => {
         const messages = this.validationErrors[name].join(', ')
         return `${name} ${messages}`

@@ -6,7 +6,7 @@
         <div class="col-md-9">
           <mcv-feed :api-url="apiUrl" />
         </div>
-        <div class="col-md-3">Popular tags</div>
+        <div class="col-md-3">Popular tags!!</div>
       </div>
     </div>
   </div>
