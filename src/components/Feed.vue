@@ -104,7 +104,7 @@ export default {
       const stringifiedParams = stringify({
         limit: LIMIT_PAGE,
         offset: this.offset,
-        ...parseUrl.query,
+        ...parsedUrl.query,
       })
       const apiUrlWithParams = `${parsedUrl.url}?${stringifiedParams}`
       this.$store.dispatch(actionTypes.getFeed, {apiUrl: apiUrlWithParams})

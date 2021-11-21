@@ -22,11 +22,11 @@ import McvBanner from '@/components/Banner'
 import McvFeedToggler from '@/components/FeedToggler'
 
 export default {
-  name: 'McvGlobalFeed',
+  name: 'McvYourFeed',
   components: {McvFeed, McvPopularTags, McvBanner, McvFeedToggler},
   data() {
     return {
-      apiUrl: '/articles',
+      apiUrl: '/articles/feed',
     }
   },
 }
