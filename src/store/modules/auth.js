@@ -2,7 +2,7 @@ import authApi from '@/api/auth'
 import {setItem} from '@/helpers/persistenceStorage'
 
 const state = {
-  isSubmiting: false,
+  isSubmitting: false,
   currentUser: null,
   validationErrors: null,
   isLoading: false,
@@ -43,30 +43,30 @@ const getters = {
 
 const mutations = {
   [mutationTypes.registerStart](state) {
-    state.isSubmiting = true
+    state.isSubmitting = true
     state.validationErrors = null
   },
   [mutationTypes.registerSuccess](state, payload) {
-    state.isSubmiting = false
+    state.isSubmitting = false
     state.currentUser = payload
     state.isLoggedIn = true
   },
   [mutationTypes.registerFailure](state, payload) {
-    state.isSubmiting = false
+    state.isSubmitting = false
     state.validationErrors = payload
   },
 
   [mutationTypes.loginStart](state) {
-    state.isSubmiting = true
+    state.isSubmitting = true
     state.validationErrors = null
   },
   [mutationTypes.loginSuccess](state, payload) {
-    state.isSubmiting = false
+    state.isSubmitting = false
     state.currentUser = payload
     state.isLoggedIn = true
   },
   [mutationTypes.loginFailure](state, payload) {
-    state.isSubmiting = false
+    state.isSubmitting = false
     state.validationErrors = payload
   },
 

@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 import GlobalFeed from '@/views/GlobalFeed.vue'
 import YourFeed from '@/views/YourFeed.vue'
 import TagFeed from '@/views/TagFeed.vue'
+import CreateArticle from '@/views/CreateArticle.vue'
+import EditArticle from '@/views/EditArticle.vue'
 import Register from '@/views/Register'
 import Login from '@/views/Login'
 import Article from '@/views/Article'
@@ -38,7 +40,7 @@ const routes = [
   {
     path: '/articles/new',
     name: 'createArticle',
-    component: GlobalFeed,
+    component: CreateArticle,
   },
   {
     path: '/articles/:slug',
@@ -48,7 +50,7 @@ const routes = [
   {
     path: '/articles/:slug/edit',
     name: 'editArticle',
-    component: GlobalFeed,
+    component: EditArticle,
   },
   {
     path: '/settings',

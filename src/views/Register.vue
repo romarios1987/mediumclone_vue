@@ -38,7 +38,7 @@
             </fieldset>
             <button
               class="btn btn-lg btn-primary pull-xs-right"
-              :disabled="isSubmiting"
+              :disabled="isSubmitting"
             >
               Sign up
             </button>
@@ -66,11 +66,11 @@ export default {
   },
   computed: {
     ...mapState({
-      isSubmiting: (state) => state.auth.isSubmiting,
+      isSubmitting: (state) => state.auth.isSubmitting,
       validationErrors: (state) => state.auth.validationErrors,
     }),
-    // isSubmiting() {
-    //   return this.$store.state.auth.isSubmiting
+    // isSubmitting() {
+    //   return this.$store.state.auth.isSubmitting
     // },
     // validationErrors() {
     //   return this.$store.state.auth.validationErrors
