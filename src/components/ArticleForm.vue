@@ -93,5 +93,8 @@ export default {
       this.$emit('articleSubmit', form)
     },
   },
+  mounted() {
+    // console.log(this.initialValues)
+  },
 }
 </script>

@@ -26,7 +26,7 @@
           <li class="nav-item">
             <router-link
               class="nav-link"
-              :to="{name: 'createArticle'}"
+              :to="{name: 'settings'}"
               active-class="active"
               ><i class="ion-gear-a"></i>&nbsp;Settings</router-link
             >
@@ -38,7 +38,14 @@
             >
               <img
                 class="user-pic"
+                v-if="currentUser.image"
                 :src="currentUser.image"
+                :alt="currentUser.username"
+              />
+              <img
+                class="user-pic"
+                v-else
+                src="../assets/default-avatar.png"
                 :alt="currentUser.username"
               />&nbsp;
               {{ currentUser.username }}

@@ -7,6 +7,7 @@ import CreateArticle from '@/views/CreateArticle.vue'
 import EditArticle from '@/views/EditArticle.vue'
 import Register from '@/views/Register'
 import Login from '@/views/Login'
+import Settings from '@/views/Settings'
 import Article from '@/views/Article'
 
 Vue.use(VueRouter)
@@ -55,7 +56,7 @@ const routes = [
   {
     path: '/settings',
     name: 'settings',
-    component: GlobalFeed,
+    component: Settings,
   },
 
   {

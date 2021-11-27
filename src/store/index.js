@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 
 import auth from '@/store/modules/auth'
+import settings from '@/store/modules/settings'
 import feed from '@/store/modules/feed'
 import popularTags from '@/store/modules/popularTags'
 import article from '@/store/modules/article'
@@ -21,5 +22,6 @@ export default new Vuex.Store({
     article,
     createArticle,
     editArticle,
+    settings,
   },
 })
