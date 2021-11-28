@@ -8,6 +8,7 @@ import popularTags from '@/store/modules/popularTags'
 import article from '@/store/modules/article'
 import createArticle from '@/store/modules/createArticle'
 import editArticle from '@/store/modules/editArticle'
+import addToFavorites from '@/store/modules/addToFavorites'
 
 Vue.use(Vuex)
 
@@ -23,5 +24,6 @@ export default new Vuex.Store({
     createArticle,
     editArticle,
     settings,
+    addToFavorites,
   },
 })

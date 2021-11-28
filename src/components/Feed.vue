@@ -36,7 +36,13 @@
             </router-link>
             <span class="date">{{ article.createdAt }}</span>
           </div>
-          <div class="pul-xs-right">Add To Favorites</div>
+          <div class="pull-xs-right">
+            <mcv-add-to-favorites
+              :is-favorited="article.favorited"
+              :article-slug="article.slug"
+              :favorites-count="article.favoritesCount"
+            />
+          </div>
         </div>
         <router-link
           :to="{name: 'article', params: {slug: article.slug}}"
@@ -68,6 +74,7 @@ import McvLoader from '@/components/Loader'
 import McvErrorMessage from '@/components/ErrorMessage'
 import {LIMIT_PAGE} from '@/helpers/constants'
 import {stringify, parseUrl} from 'query-string'
+import McvAddToFavorites from '@/components/AddToFavorites'
 
 export default {
   name: 'McvFeed',
@@ -78,7 +85,13 @@ export default {
     },
   },
 
-  components: {McvPagination, McvLoader, McvErrorMessage, McvTagList},
+  components: {
+    McvPagination,
+    McvLoader,
+    McvErrorMessage,
+    McvTagList,
+    McvAddToFavorites,
+  },
 
   computed: {
     ...mapState({
